@@ -2,132 +2,550 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
+    <title>Resume/CV Isai Ortega Tejero</title>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>#000000</title>
-    <link type="image/x-icon" rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAHklEQVQ4T2NkYGD4z0ABYBw1gGE0DBhGw4BhWIQBAE5OEAELnjVHAAAAAElFTkSuQmCC">
-    <style>
-        :root {
-            --color: #000000;
-            --color-transparent: #00000022;
-        }
+    <meta name="description" content="Responsive Resume Template">
+    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">
+    <link rel="shortcut icon" href="favicon.ico">
 
-        ::selection {
-            background: var(--color-transparent);
-        }
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
 
-        html,
-        body {
-            background: var(--color);
-            height: 100%;
-            margin: 0;
-        }
+    <!-- FontAwesome JS-->
+    <script defer src="assets/fontawesome/js/all.min.js"></script>
 
-        body {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-        }
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/pillar-1.css">
 
-        #color {
-            background: white;
-            color: var(--color);
-            font-size: 2.5rem;
-            font-weight: 300;
-            padding: 2.25rem 3rem;
-            font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
-            cursor: text;
-        }
-    </style>
+
 </head>
 
 <body>
-    <p id="color">#000000</p>
-    <script>
-        function randomInt(min, max) {
-            return Math.floor(Math.random() * (max - min + 1) + min);
-        }
 
-        function hslToHex(h, s, l) {
-            h /= 360;
-            s /= 100;
-            l /= 100;
-            var r = void 0,
-                g = void 0,
-                b = void 0;
-            if (s === 0) {
-                r = g = b = l; // achromatic
-            } else {
-                var hue2rgb = function hue2rgb(p, q, t) {
-                    if (t < 0) t += 1;
-                    if (t > 1) t -= 1;
-                    if (t < 1 / 6) return p + (q - p) * 6 * t;
-                    if (t < 1 / 2) return q;
-                    if (t < 2 / 3) return p + (q - p) * (2 / 3 - t) * 6;
-                    return p;
-                };
-                var q = l < 0.5 ? l * (1 + s) : l + s - l * s;
-                var p = 2 * l - q;
-                r = hue2rgb(p, q, h + 1 / 3);
-                g = hue2rgb(p, q, h);
-                b = hue2rgb(p, q, h - 1 / 3);
-            }
-            var toHex = function toHex(x) {
-                var hex = Math.round(x * 255).toString(16);
-                return hex.length === 1 ? '0' + hex : hex;
-            };
-            return '#' + toHex(r) + toHex(g) + toHex(b);
-        }
+    <article class="resume-wrapper text-center position-relative">
+        <div class="resume-wrapper-inner mx-auto text-left bg-white shadow-lg">
+            <header class="resume-header pt-4 pt-md-0">
+                <div class="media flex-column flex-md-row">
+                    <img class="mr-3 img-fluid picture mx-auto" src="assets/images/profile.jpg" alt="">
+                    <div class="media-body p-4 d-flex flex-column flex-md-row mx-auto mx-lg-0">
+                        <div class="primary-info">
+                            <h1 class="name mt-0 mb-1 text-white text-uppercase text-uppercase">Isaí Ortega Tejero</h1>
+                            <!-- <div class="title mb-3">Full Stack Developer</div> -->
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><a href="#"><i class="far fa-envelope fa-fw mr-2"
+                                            data-fa-transform="grow-3"></i>ortega.isai@gmail.com</a></li>
+                                <li><a href="#"><i class="fas fa-mobile-alt fa-fw mr-2"
+                                            data-fa-transform="grow-6"></i>55 9198 8805</a></li>
+                            </ul>
+                        </div>
+                        <!--//primary-info-->
+                        <div class="secondary-info ml-md-auto mt-2">
+                            <ul class="resume-social list-unstyled">
+                                <li class="mb-3">
+                                    <a href="https://www.linkedin.com/in/isaiot/">
+                                        <span class="fa-container text-center mr-2">
+                                            <i class="fab fa-linkedin-in fa-fw"></i>
+                                        </span>linkedin.com/in/isaiot
+                                    </a>
+                                </li>
+                                <li class="mb-3">
+                                    <a href="https://github.com/ortega-isai">
+                                        <span class="fa-container text-center mr-2">
+                                            <i class="fab fa-github-alt fa-fw"></i>
+                                        </span>github.com/ortega-isai
+                                    </a>
+                                </li>
+                                <!-- <li><a href="#"><span class="fa-container text-center mr-2">
+                                            <i class="fas fa-globe"></i></span>yourwebsite.com</a>
+                                </li> -->
+                            </ul>
+                        </div>
+                        <!--//secondary-info-->
 
-        window.onload = function () {
-            let stopProp = function (ev) {
-                ev.stopPropagation();
-            }
+                    </div>
+                    <!--//media-body-->
+                </div>
+                <!--//media-->
+            </header>
+            <div class="resume-body p-5">
+                <section class="resume-section summary-section mb-5">
+                    <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Perfil</h2>
+                    <div class="resume-section-content">
+                        <p class="mb-0">
+                            Director de IT orientado a resultados con amplia experiencia con 10 años en tecnologías de
+                            la información, Arquitectura, Análisis y Visualización de Datos. Historial comprobado de
+                            liderazgo y gestión de proyectos en desarrollo de software, automatización, infraestructura
+                            y métricas.
+                        </p>
+                        <p>
+                            Mi pasión es crear, mejorar e implementar procesos corporativos, ya sea informáticos, de
+                            infraestructura, solución de software empresarial o una solución a la medida. Como director,
+                            líder de proyecto, especialista y desarrollador.
+                        </p>
+                    </div>
+                </section>
+                <!--//summary-section-->
+                <div class="row">
+                    <div class="col-lg-9">
+                        <section class="resume-section experience-section mb-5">
+                            <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">
+                                Experiencia laboral
+                            </h2>
+                            <div class="resume-section-content">
+                                <div class="resume-timeline position-relative">
+                                    <article class="resume-timeline-item position-relative pb-5">
 
-            var colorElement = document.getElementById("color");
-            colorElement.addEventListener("click", stopProp, false);
-            colorElement.addEventListener("mousedown", stopProp, false);
+                                        <div class="resume-timeline-item-header mb-2">
+                                            <div class="d-flex flex-column flex-md-row">
+                                                <h3 class="resume-position-title font-weight-bold mb-1">Director Ti
+                                                </h3>
+                                                <div class="resume-company-name ml-auto">Grupo RHMaq</div>
+                                            </div>
+                                            <!--//row-->
+                                            <div class="resume-position-time">Marzo 2014 - Present</div>
+                                        </div>
+                                        <!--//resume-timeline-item-header-->
+                                        <div class="resume-timeline-item-desc">
+                                            <p>
+                                                Encargado de mantener toda la infraestructura, servicios y la atención
+                                                que la empresa necesita para que todos sus procesos fluyan sin ningún
+                                                problema!. Coordinar mantenimientos preventivos, coordinar y gestionar
+                                                proveedores.
+                                            </p>
+                                            <h4 class="resume-timeline-item-desc-heading font-weight-bold">Logros:
+                                            </h4>
+                                            <p>
+                                                Mis logos han ayudado a generar una mejor estabilidad y seguridad a los
+                                                flujos y procesos internos de la empresa, como por ejemplo:
+                                            </p>
+                                            <ul>
+                                                <li>
+                                                    Como Ingeniero desarrollé herramientas de software para BI. Esto
+                                                    permitió solucionar problemas en diferentes niveles de la empresa
+                                                    como resultado, me permitió interpretar y hacer análisis de datos
+                                                    más eficiente en 60%.
+                                                </li>
+                                                <li>
+                                                    Rediseño e implementación de la infraestructura de cableado
+                                                    estructurado, voz y datos para el corporativo, evitando riesgos de
+                                                    incendio, falla eléctrica y fallas críticas.
+                                                </li>
+                                                <li>
+                                                    Implementación de un FortiGate la nueva generacion de firewall UTM
+                                                    que nos protege de amenazas cibernéticas, visibilidad profunda,
+                                                    teniendo un alto rendimiento de seguridad hacia fuera y hacia
+                                                    dentro, entre otras cosas.
+                                                </li>
+                                                <li>
+                                                    También como responsable de iniciativas incluyendo Intelexion,
+                                                    contribuciones clave al núcleo de la plataforma de bases de datos.
+                                                    Creado nuevos protocolos para el desarrollo de la organización y el
+                                                    desarrollo de métricas para niveles gerenciales.
+                                                </li>
+                                            </ul>
+                                            <h4 class="resume-timeline-item-desc-heading font-weight-bold">
+                                                Tecnologias usadas:
+                                            </h4>
+                                            <ul class="list-inline">
+                                                <li class="list-inline-item">
+                                                    <span class="badge badge-primary badge-pill">C#</span>
+                                                </li>
+                                                <li class="list-inline-item">
+                                                    <span class="badge badge-primary badge-pill">ASP.NET</span>
+                                                </li>
+                                                <li class="list-inline-item">
+                                                    <span class="badge badge-primary badge-pill">ASMX</span>
+                                                </li>
+                                                <li class="list-inline-item">
+                                                    <span class="badge badge-primary badge-pill">MS SQL Server</span>
+                                                </li>
+                                                <li class="list-inline-item">
+                                                    <span class="badge badge-primary badge-pill">Web Services</span>
+                                                </li>
+                                                <li class="list-inline-item">
+                                                    <span class="badge badge-primary badge-pill">PL SQL</span>
+                                                </li>
+                                                <li class="list-inline-item">
+                                                    <span class="badge badge-primary badge-pill">Python</span>
+                                                </li>
+                                                <li class="list-inline-item">
+                                                    <span class="badge badge-primary badge-pill">Macros</span>
+                                                </li>
+                                                <li class="list-inline-item">
+                                                    <span class="badge badge-primary badge-pill">Fortinet</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <!--//resume-timeline-item-desc-->
 
-            var setFavicon = function (hex) {
-                var canvas = document.createElement('canvas');
-                canvas.width = 16;
-                canvas.height = 16;
-                var ctx = canvas.getContext('2d');
-                ctx.fillStyle = hex;
-                ctx.fillRect(0, 0, 16, 16);
-                document.getElementsByTagName('link')[0].href = canvas.toDataURL("image/x-icon");
-            }
+                                    </article>
+                                    <!--//resume-timeline-item-->
 
-            var setRandomColor = function setRandomColor() {
-                var h = void 0,
-                    s = void 0,
-                    l = void 0;
+                                    <article class="resume-timeline-item position-relative pb-5">
 
-                h = randomInt(0, 359);
-                s = randomInt(55, 75);
-                l = randomInt(40, 60);
+                                        <div class="resume-timeline-item-header mb-2">
+                                            <div class="d-flex flex-column flex-md-row">
+                                                <h3 class="resume-position-title font-weight-bold mb-1">
+                                                    Business Data Analyst
+                                                </h3>
+                                                <div class="resume-company-name ml-auto">DELOITTE</div>
+                                            </div>
+                                            <!--//row-->
+                                            <div class="resume-position-time">Noviembre 2013 - Marzo 2014</div>
+                                        </div>
+                                        <!--//resume-timeline-item-header-->
+                                        <div class="resume-timeline-item-desc">
+                                            <h4 class="resume-timeline-item-desc-heading font-weight-bold">Achievements
+                                            </h4>
+                                            <p>
+                                                Como Ingeniero desarrollé e implemente diseños de interfases para
+                                                comunicación entre sistemas, como resultado se optimizó los tiempos de
+                                                entrega y automatizó agregando seguridad y encriptación de datos.
+                                            </p>
+                                            <p>
+                                                Entre los principales logros se encuentran la entrega a tiempo de
+                                                soluciones a problemas de eventos complejos, errores de cálculo de
+                                                nóminas y revisiones.
+                                            </p>
+                                            <p>
+                                                Administración de proyectos simultáneos, mantenimiento y soporte al
+                                                sistema ERP manteniendo tiempos establecidos en los SLA cumpliendo las
+                                                métricas de las certificaciones para niveles gerenciales.
+                                            </p>
+                                            <h4 class="resume-timeline-item-desc-heading font-weight-bold">Technologies
+                                                used:</h4>
+                                            <ul class="list-inline">
+                                                <li class="list-inline-item"><span
+                                                        class="badge badge-primary badge-pill">Oracle Business
+                                                        Intelligence</span></li>
+                                                <li class="list-inline-item"><span
+                                                        class="badge badge-primary badge-pill">PL SQL</span></li>
+                                                <li class="list-inline-item"><span
+                                                        class="badge badge-primary badge-pill">SQL Oracle</span></li>
+                                                <li class="list-inline-item"><span
+                                                        class="badge badge-primary badge-pill">Toad for Oracle</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <!--//resume-timeline-item-desc-->
 
-                document.documentElement.style.setProperty('--color', 'hsl(' + h + ', ' + s + '%, ' + l + '%)');
-                var hex = hslToHex(h, s, l);
-                document.title = hex;
-                colorElement.innerHTML = hex;
-                document.documentElement.style.setProperty('--color-transparent', hex + '22');
+                                    </article>
+                                    <!--//resume-timeline-item-->
 
-                setFavicon(hex);
-            };
-            setRandomColor();
+                                    <article class="resume-timeline-item position-relative pb-5">
 
-            var body = document.getElementsByTagName("body")[0];
-            body.addEventListener("mousedown", function (ev) {
-                ev.preventDefault();
-            });
-            body.addEventListener("click", function () {
-                setRandomColor();
-            }, false);
-        };
-    </script>
+                                        <div class="resume-timeline-item-header mb-2">
+                                            <div class="d-flex flex-column flex-md-row">
+                                                <h3 class="resume-position-title font-weight-bold mb-1">
+                                                    Aliatec
+                                                </h3>
+                                                <div class="resume-company-name ml-auto">Líder de proyecto</div>
+                                            </div>
+                                            <!--//row-->
+                                            <div class="resume-position-time">Agosto 2011 - Noviembre 2013</div>
+                                        </div>
+                                        <!--//resume-timeline-item-header-->
+                                        <div class="resume-timeline-item-desc">
+                                            <p>
+                                                Líder de proyectos de implementación de sistemas ERP y de control de
+                                                asistencia para empresas mayores a 1000 empleados ahorrando tiempo de
+                                                procesar la nómina en 60%.
+                                                Responsable de implementación del Grupo RHMaq, La Embajada Británica
+                                                en México e Iké Asistencia, entre otros. Para mejorar el cálculo de
+                                                nómina más rápido y eficiente en un 80% beneficiando en tiempos.
+                                                Responsable de la implementación de control de asistencia para
+                                                Manpower Group a nivel nacional para sus clientes. Reflejándose en
+                                                beneficios para los mismos, ahorro en procedimientos, control de
+                                                personal, productividad y puntualidad.
+                                                Como ingeniero desarrollé una interfase para comunicación entre
+                                                sistemas con el objetivo de mantener en sincronización de volúmenes de
+                                                datos organizados.
+                                            </p>
+                                            <p>
+
+                                            </p>
+                                            <h4 class="resume-timeline-item-desc-heading font-weight-bold">Technologies
+                                                used:</h4>
+                                            <ul class="list-inline">
+                                                <li class="list-inline-item"><span
+                                                        class="badge badge-primary badge-pill">.NET</span></li>
+                                                <li class="list-inline-item"><span
+                                                        class="badge badge-primary badge-pill">MS SQL Server</span></li>
+                                                <li class="list-inline-item"><span
+                                                        class="badge badge-primary badge-pill">C#</span></li>
+                                                <li class="list-inline-item"><span
+                                                        class="badge badge-primary badge-pill">Fast Report</span></li>
+                                            </ul>
+                                        </div>
+                                        <!--//resume-timeline-item-desc-->
+
+                                    </article>
+                                    <!--//resume-timeline-item-->
+
+                                </div>
+                                <!--//resume-timeline-->
+
+                            </div>
+                        </section>
+                        <!--//experience-section-->
+
+                        <section class="resume-section education-section mb-5">
+                            <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Education</h2>
+                            <div class="resume-section-content">
+                                <ul class="list-unstyled">
+                                    <li class="mb-2">
+                                        <div class="resume-degree font-weight-bold">CCC Big Data Foundation</div>
+                                        <div class="resume-degree-org">Cloud Credential Council - EXIN</div>
+                                        <div class="resume-degree-time">2019</div>
+                                    </li>
+                                    <li class="mb-2">
+                                        <div class="resume-degree font-weight-bold">
+                                            Scrum Master
+                                            <span class="lead small">(no certificado)</span>
+                                        </div>
+                                        <div class="resume-degree-time">2018</div>
+                                    </li>
+                                    <li class="mb-2">
+                                        <div class="resume-degree font-weight-bold">
+                                            ITIL FOUNDATION CERTIFICATE
+                                            <span class="lead small">(Cn. 5428932.20428368)</span>
+                                        </div>
+                                        <div class="resume-degree-org">AXELOS Global Best Practice</div>
+                                        <div class="resume-degree-time">2015</div>
+                                    </li>
+                                    <li class="mb-2">
+                                        <div class="resume-degree font-weight-bold">
+                                            Ingeniería en Mecatrónica
+                                            <span class="lead small">(Titulado)</span>
+                                        </div>
+                                        <div class="resume-degree-org">Universidad del Valle de México</div>
+                                        <div class="resume-degree-time">2007 - 2011</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+                        <!--//education-section-->
+                    </div>
+                    <div class="col-lg-3">
+                        <section class="resume-section skills-section mb-5">
+                            <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Skills &amp;
+                                Tools</h2>
+                            <div class="resume-section-content">
+                                <div class="resume-skill-item">
+                                    <h4 class="resume-skills-cat font-weight-bold">Herramientas</h4>
+                                    <ul class="list-unstyled mb-4">
+                                        <li class="mb-2">
+                                            <div class="resume-skill-name">MS Management Studio</div>
+                                            <div class="progress resume-progress">
+                                                <div class="progress-bar theme-progress-bar-dark progress-bar-striped progress-bar-animated"
+                                                    role="progressbar" style="width: 98%" aria-valuenow="25"
+                                                    aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </li>
+                                        <li class="mb-2">
+                                            <div class="resume-skill-name">Power BI</div>
+                                            <div class="progress resume-progress">
+                                                <div class="progress-bar theme-progress-bar-dark progress-bar-striped progress-bar-animated"
+                                                    role="progressbar" style="width: 74%" aria-valuenow="25"
+                                                    aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </li>
+                                        <li class="mb-2">
+                                            <div class="resume-skill-name">Visual Studio</div>
+                                            <div class="progress resume-progress">
+                                                <div class="progress-bar theme-progress-bar-dark progress-bar-striped progress-bar-animated"
+                                                    role="progressbar" style="width: 92%" aria-valuenow="25"
+                                                    aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </li>
+
+                                        <li class="mb-2">
+                                            <div class="resume-skill-name">Visual Code</div>
+                                            <div class="progress resume-progress">
+                                                <div class="progress-bar theme-progress-bar-dark progress-bar-striped progress-bar-animated"
+                                                    role="progressbar" style="width: 100%" aria-valuenow="25"
+                                                    aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </li>
+                                        <li class="mb-2">
+                                            <div class="resume-skill-name">SysAdmin Tools</div>
+                                            <div class="progress resume-progress">
+                                                <div class="progress-bar theme-progress-bar-dark progress-bar-striped progress-bar-animated"
+                                                    role="progressbar" style="width: 81%" aria-valuenow="25"
+                                                    aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!--//resume-skill-item-->
+
+                                <div class="resume-skill-item">
+                                    <h4 class="resume-skills-cat font-weight-bold">Lenguajes</h4>
+                                    <ul class="list-unstyled">
+                                        <li class="mb-2">
+                                            <div class="resume-skill-name">Python/Django/Pandas</div>
+                                            <div class="progress resume-progress">
+                                                <div class="progress-bar theme-progress-bar-dark progress-bar-striped progress-bar-animated"
+                                                    role="progressbar" style="width: 95%" aria-valuenow="25"
+                                                    aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </li>
+                                        <li class="mb-2">
+                                            <div class="resume-skill-name">Shell, Bash</div>
+                                            <div class="progress resume-progress">
+                                                <div class="progress-bar theme-progress-bar-dark progress-bar-striped progress-bar-animated"
+                                                    role="progressbar" style="width: 71%" aria-valuenow="25"
+                                                    aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </li>
+                                        <li class="mb-2">
+                                            <div class="resume-skill-name">MS SQL Server</div>
+                                            <div class="progress resume-progress">
+                                                <div class="progress-bar theme-progress-bar-dark progress-bar-striped progress-bar-animated"
+                                                    role="progressbar" style="width: 86%" aria-valuenow="25"
+                                                    aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </li>
+                                        <li class="mb-2">
+                                            <div class="resume-skill-name">C#</div>
+                                            <div class="progress resume-progress">
+                                                <div class="progress-bar theme-progress-bar-dark progress-bar-striped progress-bar-animated"
+                                                    role="progressbar" style="width: 82%" aria-valuenow="25"
+                                                    aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!--//resume-skill-item-->
+
+                                <div class="resume-skill-item">
+                                    <h4 class="resume-skills-cat font-weight-bold">Others</h4>
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item"><span class="badge badge-light">MySQL</span></li>
+                                        <li class="list-inline-item"><span class="badge badge-light">SQL Oracle</span>
+                                        </li>
+                                        <li class="list-inline-item"><span class="badge badge-light">Postgresql</span>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <span class="badge badge-light">Net Framework</span>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <span class="badge badge-light">JavaScript, CSS, HTML</span>
+                                        </li>
+                                        <li class="list-inline-item"><span class="badge badge-light">MongoDB</span></li>
+                                        <li class="list-inline-item"><span class="badge badge-light">NET Core</span>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <span class="badge badge-light">Web Services SOAP</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!--//resume-skill-item-->
+                                <div class="resume-skill-item">
+                                    <h4 class="resume-skills-cat font-weight-bold">Competencias</h4>
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item">
+                                            <span class="badge badge-secondary">Integridad</span>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <span class="badge badge-secondary">Adaptabilidad</span>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <span class="badge badge-secondary">Creatividad</span>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <span class="badge badge-secondary">Empoderar a Otros</span>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <span class="badge badge-secondary">Experto en Estrategia</span>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <span class="badge badge-secondary">Flexibilidad</span>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <span class="badge badge-secondary">Analítico</span>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <span class="badge badge-secondary">Orientación a Clientes</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!--//resume-skill-item-->
+                            </div>
+                            <!--resume-section-content-->
+                        </section>
+                        <!--//skills-section-->
+
+                        <!-- <section class="resume-section reference-section mb-5">
+                            <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Awards</h2>
+                            <div class="resume-section-content">
+                                <ul class="list-unstyled resume-awards-list">
+                                    <li class="mb-2 pl-4 position-relative">
+                                        <i class="resume-award-icon fas fa-trophy position-absolute"
+                                            data-fa-transform="shrink-2"></i>
+                                        <div class="resume-award-name">Award Name Lorem</div>
+                                        <div class="resume-award-desc">Award desc goes here, ultricies nec, pellentesque
+                                            eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo.
+                                        </div>
+                                    </li>
+                                    <li class="mb-0 pl-4 position-relative">
+                                        <i class="resume-award-icon fas fa-trophy position-absolute"
+                                            data-fa-transform="shrink-2"></i>
+                                        <div class="resume-award-name">Award Name Ipsum</div>
+                                        <div class="resume-award-desc">Award desc goes here, ultricies nec,
+                                            pellentesque.</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </section> -->
+                        <!--//interests-section-->
+                        <section class="resume-section language-section mb-5">
+                            <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Language</h2>
+                            <div class="resume-section-content">
+                                <ul class="list-unstyled resume-lang-list">
+                                    <li class="mb-2"><span class="resume-lang-name font-weight-bold">English</span>
+                                        <small class="text-muted font-weight-normal">(Professional)</small>
+                                    </li>
+                                    <li><span class="resume-lang-name font-weight-bold">Spanish</span> <small
+                                            class="text-muted font-weight-normal">(Native)</small></li>
+                                </ul>
+                            </div>
+                        </section>
+                        <!--//language-section-->
+                        <section class="resume-section interests-section mb-5">
+                            <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Interests</h2>
+                            <div class="resume-section-content">
+                                <ul class="list-unstyled">
+                                    <li class="mb-1">Aprender</li>
+                                    <li class="mb-1">Microelectronica</li>
+                                </ul>
+                            </div>
+                        </section>
+                        <!--//interests-section-->
+
+                    </div>
+                </div>
+                <!--//row-->
+            </div>
+            <!--//resume-body-->
+
+
+        </div>
+    </article>
+
+
+    <footer class="footer text-center pt-2 pb-5">
+        <!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
+        <small class="copyright">Designed with <i class="fas fa-heart"></i> by <a href="http://themes.3rdwavemedia.com"
+                target="_blank">Xiaoying Riley</a> for developers</small>
+    </footer>
+
+
+
 </body>
 
 </html>
